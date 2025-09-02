@@ -1,0 +1,145 @@
+* {
+  font-family: "Noto Sans", "Noto Emoji", sans-serif; /* Ensure emoji support */
+  font-size: 14px; /* Slightly smaller for minimal look */
+  color: #ebdbb2; /* Gruvbox foreground */
+}
+
+/* Control Center */
+.control-center {
+  background-color: rgba(40, 40, 40, 0.8); /* Gruvbox dark0 with transparency for blur */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border: 2px solid #ebdbb2; /* Gruvbox foreground for border */
+  border-radius: 4px; /* Minimal rounding */
+  padding: 8px;
+  margin: 10px; /* Space from screen edges */
+  min-height: 200px; /* Start small, grow with content */
+  max-height: 500px; /* Max height to prevent overflow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Notification Area */
+.notification {
+  background-color: rgba(60, 56, 54, 0.9); /* Gruvbox dark1 with transparency */
+  border-radius: 4px; /* Minimal rounding */
+  margin: 4px;
+  padding: 8px;
+}
+
+/* Buttons in Grid */
+.button {
+  background-color: #3c3836; /* Gruvbox dark1 */
+  border-radius: 4px; /* Minimal rounding */
+  padding: 6px;
+  margin: 4px;
+  font-size: 18px; /* Slightly larger for icons */
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #d79921; /* Gruvbox yellow for hover */
+}
+
+/* MPRIS Widget */
+.mpris {
+  background-color: #3c3836; /* Gruvbox dark1 */
+  border-radius: 4px; /* Minimal rounding */
+  padding: 8px;
+  margin: 4px;
+}
+
+.mpris image {
+  min-width: 128px;
+  min-height: 128px;
+  border-radius: 4px; /* Minimal rounding */
+  background-size: cover;
+  margin-right: 8px;
+}
+
+.mpris label {
+  color: #ebdbb2; /* Gruvbox foreground */
+}
+
+/* Volume and Backlight Sliders */
+.control-center .widget.volume .scale trough,
+.control-center .widget.backlight .scale trough,
+.control-center .volume .scale.trough,
+.control-center .backlight .scale.trough,
+.control-center .scale trough,
+.control-center .slider-trough,
+.control-center .trough {
+  background-color: #504945 !important; /* Gruvbox dark2 for slider track */
+  border: 2px solid #cc241d !important; /* Diagnostic red border to confirm targeting */
+  border-radius: 4px; /* Minimal rounding */
+  min-height: 8px;
+  min-width: 100px; /* Ensure trough is visible */
+}
+
+.control-center .widget.volume .scale slider,
+.control-center .widget.backlight .scale slider,
+.control-center .volume .scale.slider,
+.control-center .backlight .scale.slider,
+.control-center .scale slider,
+.control-center .slider-handle,
+.control-center .slider {
+  background-color: #d3869b !important; /* Gruvbox purple for slider handle */
+  border: 2px solid #cc241d !important; /* Diagnostic red border to confirm targeting */
+  border-radius: 4px; /* Minimal rounding */
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.control-center .widget.volume .scale slider:hover,
+.control-center .widget.backlight .scale slider:hover,
+.control-center .volume .scale.slider:hover,
+.control-center .backlight .scale.slider:hover,
+.control-center .scale slider:hover,
+.control-center .slider-handle:hover,
+.control-center .slider:hover {
+  background-color: #b16286 !important; /* Gruvbox purple light for hover */
+  border: 2px solid #cc241d !important; /* Diagnostic red border */
+}
+
+/* DND Toggle */
+.dnd {
+  background-color: #3c3836; /* Gruvbox dark1 */
+  border-radius: 4px; /* Minimal rounding */
+  padding: 6px;
+  margin: 4px;
+}
+
+.dnd label {
+  color: #ebdbb2; /* Gruvbox foreground */
+}
+
+.dnd switch {
+  background-color: #504945; /* Gruvbox dark2 */
+  border-radius: 4px;
+}
+
+.dnd switch:checked {
+  background-color: #98971a; /* Gruvbox green for active */
+}
+
+/* Notification Title and Clear All Button */
+.title {
+  background-color: #3c3836; /* Gruvbox dark1 */
+  border-radius: 4px; /* Minimal rounding */
+  padding: 6px;
+  margin: 4px;
+}
+
+.title button {
+  background-color: #cc241d; /* Gruvbox red for Clear All */
+  border-radius: 4px; /* Minimal rounding */
+  padding: 6px;
+}
+
+.title button:hover {
+  background-color: #fb4934; /* Gruvbox red light for hover */
+}
+
+/* Ensure notifications grow dynamically */
+.control-center .notification-group {
+  margin: 4px;
+  padding: 4px;
+}
